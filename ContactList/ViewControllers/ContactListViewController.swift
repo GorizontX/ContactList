@@ -36,7 +36,9 @@ class ContactListViewController: UITableViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        guard let contactDataVC = segue.destination as? ContactDataViewController else { return }
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        contactDataVC.person = persons[indexPath.row]
     }
     
 }

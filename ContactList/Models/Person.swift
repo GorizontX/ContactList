@@ -22,16 +22,24 @@ struct Person {
         
         let dataStore = DataStore()
         
-        let randomName = dataStore.names.randomElement()!
-        let randomSurname = dataStore.surnames.randomElement()!
-        let randomPhone = dataStore.phones.randomElement()!
-        let randomEmail = dataStore.emails.randomElement()!
+        let randomName = dataStore.names.shuffled()
+        let randomSurname = dataStore.surnames.shuffled()
+        let randomPhone = dataStore.phones.shuffled()
+        let randomEmail = dataStore.emails.shuffled()
         
-        for _ in 0...7  {
-            let person = Person(name: randomName, surname: randomSurname, phone: randomPhone, email: randomEmail)
+        let maximumValue = randomName.count
+        
+        for index in 0..<maximumValue  {
+                
+            
+            let person = Person(
+                name: randomName[index],
+                surname: randomSurname[index],
+                phone: randomPhone[index],
+                email: randomEmail[index]
+            )
             persons.append(person)
         }
-        
         return persons
     }
     

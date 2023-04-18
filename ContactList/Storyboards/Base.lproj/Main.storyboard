@@ -56,14 +56,50 @@
                     <view key="view" contentMode="scaleToFill" id="QC9-Ow-KG7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Jd6-bA-yxz">
+                                <rect key="frame" x="16" y="123" width="361" height="132"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NQ-ky-oKP">
+                                        <rect key="frame" x="0.0" y="0.0" width="51.333333333333336" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STy-G5-bs9">
+                                        <rect key="frame" x="0.0" y="54" width="48" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFX-n6-EwH">
+                                        <rect key="frame" x="0.0" y="108" width="48" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7R4-H1-tds"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jd6-bA-yxz" firstAttribute="centerX" secondItem="QC9-Ow-KG7" secondAttribute="centerX" id="K2n-o9-OgY"/>
+                            <constraint firstItem="Jd6-bA-yxz" firstAttribute="top" secondItem="7R4-H1-tds" secondAttribute="top" constant="20" id="Q0P-Ix-AqJ"/>
+                            <constraint firstItem="Jd6-bA-yxz" firstAttribute="leading" secondItem="7R4-H1-tds" secondAttribute="leading" constant="16" id="hwi-5G-j6W"/>
+                            <constraint firstItem="7R4-H1-tds" firstAttribute="trailing" secondItem="Jd6-bA-yxz" secondAttribute="trailing" constant="16" id="vnV-7r-ruH"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Acc-UZ-xOh"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="STy-G5-bs9" id="XzD-Gu-Pqs"/>
+                        <outlet property="nameLabel" destination="7NQ-ky-oKP" id="LIo-up-vcU"/>
+                        <outlet property="phoneLabel" destination="GFX-n6-EwH" id="XYQ-zl-4vA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hmi-wK-66u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2760" y="158"/>
+            <point key="canvasLocation" x="2759.5419847328244" y="157.74647887323945"/>
         </scene>
         <!--Saction Contact List View Controller-->
         <scene sceneID="AYz-KX-RFG">
@@ -117,6 +153,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Contact List" id="oQz-eQ-0dU"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0ih-6F-U96">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
